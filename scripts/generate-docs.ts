@@ -155,10 +155,14 @@ function updateReadmeWithOptionsMarkdown(optionsMarkdown: string): void {
   const after = readmeContent.substring(endIndex);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const updatedContent = before + '\n\n```sh\n' + help + '```\n' + after;
 =======
   const updatedContent = before + '\n\n' + optionsMarkdown + '\n\n' + after;
 >>>>>>> 8ba8460 (docs: polish readme (#2))
+=======
+  const updatedContent = before + '\n\n```sh\n' + help + '```\n\n' + after;
+>>>>>>> 03cede8 (ci: preconfigure CI jobs (#3))
 
   fs.writeFileSync(README_PATH, updatedContent);
   console.log('Updated README.md with options markdown');

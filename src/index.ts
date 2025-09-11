@@ -35,9 +35,12 @@ import fs from 'node:fs';
 import assert from 'node:assert';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const args = yargs(hideBin(process.argv))
+=======
+export const yargsInstance = yargs(hideBin(process.argv))
+>>>>>>> d89d593 (chore: re-wrap cli (#4))
   .scriptName('npx chrome-devtools-mcp@latest')
-  .wrap(100)
   .option('browserUrl', {
     type: 'string',
     description: 'The browser URL to connect to',
@@ -117,11 +120,17 @@ const yargsInstance = yargs(hideBin(process.argv))
   ]);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export const args = yargsInstance
   .wrap(Math.min(120, yargsInstance.terminalWidth()))
 >>>>>>> 8ba8460 (docs: polish readme (#2))
   .help()
+=======
+  .help();
+export const args = yargsInstance
+  .wrap(Math.min(120, yargsInstance.terminalWidth()))
+>>>>>>> d89d593 (chore: re-wrap cli (#4))
   .parseSync();
 
 if (args.logFile) {
